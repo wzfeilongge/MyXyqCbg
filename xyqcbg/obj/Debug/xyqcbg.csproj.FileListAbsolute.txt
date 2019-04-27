@@ -1,0 +1,10 @@
+D:\Lean\xyqcbg\xyqcbg\bin\Debug\xyqcbg.exe.config
+D:\Lean\xyqcbg\xyqcbg\bin\Debug\xyqcbg.exe
+D:\Lean\xyqcbg\xyqcbg\bin\Debug\xyqcbg.pdb
+D:\Lean\xyqcbg\xyqcbg\bin\Debug\Newtonsoft.Json.dll
+D:\Lean\xyqcbg\xyqcbg\bin\Debug\Newtonsoft.Json.xml
+D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.Form1.resources
+D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.Properties.Resources.resources
+D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.csproj.GenerateResource.Cache
+D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.exe
+D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.pdb
