@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using xyqcbg.core;
 using System.Threading;
-
+using Newtonsoft.Json;
+using System.Collections;
+using static xyqcbg.core.EnumSc;
 
 namespace xyqcbg
 {
@@ -98,21 +100,26 @@ namespace xyqcbg
                 Action acion = delegate ()
                 {
                     if (role.Checked)
-                    {   
+                    {
+                        var schoolName = textBox4.Text;
+                        if (string.IsNullOrEmpty(schoolName)) {
+
+                            schoolName = "or";
+                        }
+                        var fd = (SchoolEnmu)Enum.Parse(typeof(SchoolEnmu), schoolName, true);
+
+                        var schoolId = (int)fd;
                         //选中的是角色
                         var xiangruiList = textBox3.Text;
-                       listView1.Items.Clear();
-                        var JsonMessage = GetJson.GetRoleInOmen(xiangruiList, Convert.ToInt16(textBox1.Text), Convert.ToInt16(textBox2.Text),page, IRetrunRole(textBox4.Text).ToString());
+                        listView1.Items.Clear();
+                        var JsonMessage = GetJson.GetRoleInOmen(xiangruiList, Convert.ToInt16(textBox1.Text), Convert.ToInt16(textBox2.Text),page,schoolId.ToString() );
                         foreach (var data in JsonMessage)
                         {
                             if (cont == 15)
                             {
                                 cont = 0;
                             }
-
-                            
-                           
-                            lt = new ListViewItem();
+                         lt = new ListViewItem();
                             if (data.school == 0)
                             {
                                 //不是角色
@@ -120,7 +127,10 @@ namespace xyqcbg
                                // lts[cont].Text = data.equip_name;
                             }
                             else {
-                                lt.Text = RetrunRole(data.school) + "-" + data.seller_nickname;//门派
+                                //var schoolName = new schoolEnum();
+                              
+                                var school = Enum.GetName(typeof(SchoolEnmu), data.school);
+                                lt.Text =school + "-" + data.seller_nickname;//门派
                             }
                         lt.SubItems.Add(data.equip_level_desc);//级别
                         lt.SubItems.Add(data.time_left);//剩余时间
@@ -136,11 +146,11 @@ namespace xyqcbg
                         lt.SubItems.Add(data.bb_expt_fashu.ToString());//法术修炼
                         lt.SubItems.Add(data.bb_expt_kangfa.ToString());//抗法修炼
                         var url = "https://xyq.cbg.163.com/" + "/equip?s=" + data.server_id + "&eid=" + data.eid + "&equip_refer=26&view_loc=reco_left";
+                        lt.SubItems.Add(Tools.DescReturn(data.desc));
                         urlArray[cont] = url; //购买链接
-                       
-
                         cont++;
                         listView1.Items.Add(lt);
+
                      }
                       
                     }
@@ -165,159 +175,9 @@ namespace xyqcbg
 
            
         }
- 
-        /// <summary>
-        /// 根据ID 判断门派
-        /// </summary>
-        /// <param name="school"></param>
-        /// <returns></returns>
-        public string RetrunRole(int school)
-        {
-            string RoleName = "";
-
-            switch (school)
-            {
-                case 1:
-                    RoleName = "大唐官府";
-                    break;
-                case 2:
-                    RoleName = "化生寺";
-                    break;
-                case 3:
-                    RoleName = "女儿村";
-                    break;
-                case 4:
-                    RoleName = "方寸山";
-                    break;
-                case 5:
-                    RoleName = "天宫";
-                    break;
-                case 6:
-                    RoleName = "普陀山";
-                    break;
-                case 7:
-                    RoleName = "龙宫";
-                    break;
-                case 8:
-                    RoleName = "五庄观";
-                    break;
-                case 9:
-                    RoleName = "狮驼岭";
-                    break;
-                case 10:
-                    RoleName = "魔王寨";
-                    break;
-                case 11:
-                    RoleName = "地府";
-                    break;
-                case 12:
-                    RoleName = "盘丝洞";
-                    break;
-                case 13:
-                    RoleName = "神木林";
-                    break;
-                case 14:
-                    RoleName = "凌波城";
-                    break;
-                case 15:
-                    RoleName = "无底洞";
-                    break;
-                case 16:
-                    RoleName = "女魃墓";
-                    break;
-                case 17:
-                    RoleName = "天机城";
-                    break;
-                case 18:
-                    RoleName = "花果山";
-                    break;
+  
 
 
-
-            }
-
-
-
-
-            return RoleName;
-
-        }
-        /// <summary>
-        /// 根据门派号 判断是门派Id
-        /// </summary>
-        /// <param name="school"></param>
-        /// <returns></returns>
-        public int IRetrunRole(string schoolname)
-        {
-            int RoleName = 0;
-
-            switch (schoolname)
-            {
-                case "大唐官府":
-                    RoleName = 1;
-                    break;
-                case "化生寺":
-                    RoleName =2 ;
-                    break;
-                case "女儿村":
-                    RoleName = 3;
-                    break;
-                case "方寸山":
-                    RoleName = 4;
-                    break;
-                case "天宫":
-                    RoleName = 5;
-                    break;
-                case "普陀山":
-                    RoleName =6;
-                    break;
-                case "龙宫":
-                    RoleName = 7;
-                    break;
-                case "五庄观":
-                    RoleName =8;
-                    break;
-                case "狮驼岭":
-                    RoleName = 9;
-                    break;
-                case "魔王寨":
-                    RoleName =10;
-                    break;
-                case "地府":
-                    RoleName = 11;
-                    break;
-                case "盘丝洞":
-                    RoleName = 12;
-                    break;
-                case "神木林":
-                    RoleName = 13;
-                    break;
-                case "凌波城":
-                    RoleName = 14;
-                    break;
-                case "无底洞":
-                    RoleName =  15;
-                    break;
-                case "女魃墓":
-                    RoleName = 16;
-                    break;
-                case "天机城":
-                    RoleName = 17;
-                    break;
-                case "花果山":
-                    RoleName = 18;
-                    break;
-
-
-
-            }
-
-
-
-
-            return RoleName;
-
-        }
         /// <summary>
         /// 加载窗体时
         /// </summary>

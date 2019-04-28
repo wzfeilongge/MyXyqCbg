@@ -8,3 +8,15 @@ D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.Properties.Resources.resources
 D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.csproj.GenerateResource.Cache
 D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.exe
 D:\Lean\xyqcbg\xyqcbg\obj\Debug\xyqcbg.pdb
+F:\xyqcbg\xyqcbg\bin\Debug\xyqcbg.exe.config
+F:\xyqcbg\xyqcbg\bin\Debug\xyqcbg.exe
+F:\xyqcbg\xyqcbg\bin\Debug\xyqcbg.pdb
+F:\xyqcbg\xyqcbg\bin\Debug\Newtonsoft.Json.dll
+F:\xyqcbg\xyqcbg\bin\Debug\Newtonsoft.Json.xml
+F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.Form1.resources
+F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.Properties.Resources.resources
+F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.csproj.GenerateResource.cache
+F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.csproj.CoreCompileInputs.cache
+F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.csproj.CopyComplete
+F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.exe
+F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.pdb

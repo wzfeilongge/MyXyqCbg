@@ -56,11 +56,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(119, 350);
+            this.button1.Location = new System.Drawing.Point(119, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 23);
             this.button1.TabIndex = 0;
@@ -70,7 +71,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(590, 350);
+            this.button2.Location = new System.Drawing.Point(576, 320);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -93,11 +94,13 @@
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12,
-            this.columnHeader13});
+            this.columnHeader13,
+            this.columnHeader14});
+            this.listView1.GridLines = true;
             this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(9, 28);
+            this.listView1.Location = new System.Drawing.Point(-1, 28);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1066, 316);
+            this.listView1.Size = new System.Drawing.Size(1148, 269);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -163,7 +166,7 @@
             // columnHeader13
             // 
             this.columnHeader13.Text = "宝宝法防";
-            this.columnHeader13.Width = 77;
+            this.columnHeader13.Width = 103;
             // 
             // role
             // 
@@ -217,7 +220,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(383, 350);
+            this.button3.Location = new System.Drawing.Point(383, 320);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 16;
@@ -227,7 +230,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(262, 350);
+            this.button4.Location = new System.Drawing.Point(265, 320);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 17;
@@ -269,11 +272,16 @@
             this.textBox4.Size = new System.Drawing.Size(100, 21);
             this.textBox4.TabIndex = 21;
             // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "总经验/亿";
+            this.columnHeader14.Width = 83;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1076, 372);
+            this.ClientSize = new System.Drawing.Size(1135, 372);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -327,6 +335,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
     }
 }
 
