@@ -20,3 +20,16 @@ F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.csproj.CoreCompileInputs.cache
 F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.csproj.CopyComplete
 F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.exe
 F:\xyqcbg\xyqcbg\obj\Debug\xyqcbg.pdb
+F:\git\MyXyqCbg\xyqcbg\bin\Debug\xyqcbg.exe.config
+F:\git\MyXyqCbg\xyqcbg\bin\Debug\xyqcbg.exe
+F:\git\MyXyqCbg\xyqcbg\bin\Debug\xyqcbg.pdb
+F:\git\MyXyqCbg\xyqcbg\bin\Debug\Newtonsoft.Json.dll
+F:\git\MyXyqCbg\xyqcbg\bin\Debug\Newtonsoft.Json.xml
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.csprojAssemblyReference.cache
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.Form1.resources
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.Properties.Resources.resources
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.csproj.GenerateResource.cache
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.csproj.CoreCompileInputs.cache
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.csproj.CopyComplete
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.exe
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.pdb
