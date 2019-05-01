@@ -32,6 +32,15 @@ namespace xyqcbg.core
           }
 
 
+        public enum authority {
+            角色=1,
+            物品=2,
+            管理员=3
+
+
+        }
+
+
 
 
 
