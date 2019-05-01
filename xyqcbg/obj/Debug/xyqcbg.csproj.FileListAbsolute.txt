@@ -75,3 +75,6 @@ F:\git\MyXyqCbg\xyqcbg\bin\Debug\System.Interactive.Async.xml
 F:\git\MyXyqCbg\xyqcbg\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.UI.LoginUI.resources
 F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.UI.Register.resources
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.UI.prop.resources
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.UI.choose.resources
+F:\git\MyXyqCbg\xyqcbg\obj\Debug\xyqcbg.csprojAssemblyReference.cache

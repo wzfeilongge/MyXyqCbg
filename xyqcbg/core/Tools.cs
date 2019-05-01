@@ -39,9 +39,34 @@ namespace xyqcbg.core
             return newDesc;
       }
 
+        public static string Descprop(string desc)
+        {
+
+            if (string.IsNullOrEmpty(desc.ToString()))
+            {
+
+                return null;
+            }
+            var newDesc = desc;
+            // int index = newDesc.IndexOf("sum_exp");
+            //newDesc = newDesc.Substring(index + 9, 3);
+            //int sum_exp = Convert.ToInt16(newDesc);
+            newDesc = newDesc.Replace("#r", "");
+            newDesc = newDesc.Replace("#G", "");
+            newDesc = newDesc.Replace("#Y", "");
+            newDesc = newDesc.Replace("#W", "");
+            newDesc = newDesc.Replace("#c4DBAF4", "");
+            
+
+            return newDesc.Trim();
+        }
 
 
-       
+
+
+
+
+
 
     }
 }

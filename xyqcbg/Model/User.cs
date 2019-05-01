@@ -10,7 +10,7 @@ namespace xyqcbg.Model
     public  class User
     {
         public int id { get; set; }//主键Id
-         public string UserName { get; set; } //用户名
+        public string UserName { get; set; } //用户名
        
         public string UserPwd { get; set; } // 用户密码
 
@@ -19,6 +19,8 @@ namespace xyqcbg.Model
         public string Name { get; set; }//用户实际信息
 
         public static User user=null;
+
+
 
 
        

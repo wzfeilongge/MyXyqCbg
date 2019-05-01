@@ -48,5 +48,29 @@ namespace xyqcbg.core
 
         }
 
+        //更新数据库状态
+        public static int UpdateUserState(string username,int state)
+        {
+            using (var context = new UsersContext())
+            {
+
+                //User.user = context.Users.SingleOrDefault((u) => u.UserName == name && u.UserPwd == pwd);
+                var user = context.Users.Where(u => u.UserName == username).FirstOrDefault();
+                if (user!=null) {
+                    user.State = state;
+                    return context.SaveChanges();
+                }
+
+                return 0;
+
+            }
+
+
+        }
+
+
+
+
+
     }
 }

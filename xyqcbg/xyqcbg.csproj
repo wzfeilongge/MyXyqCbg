@@ -125,6 +125,12 @@
     <Compile Include="core\Tools.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UsersContext.cs" />
+    <Compile Include="UI\choose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\choose.Designer.cs">
+      <DependentUpon>choose.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,12 +149,21 @@
     <Compile Include="UI\LoginUI.Designer.cs">
       <DependentUpon>LoginUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\prop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\prop.Designer.cs">
+      <DependentUpon>prop.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\choose.resx">
+      <DependentUpon>choose.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +178,9 @@
     </Compile>
     <EmbeddedResource Include="UI\LoginUI.resx">
       <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\prop.resx">
+      <DependentUpon>prop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>

@@ -88,5 +88,21 @@ namespace xyqcbg.core
         }
 
 
+        public static ResultCode[] GetProp(int min,int max,int isTrue,int page)
+        {
+
+            RequestCode req = RequestCode.reqProp(min,max,isTrue,page); 
+            var url = "https://recommd.xyq.cbg.163.com/cgi-bin/recommend.py";
+            var result = HttpHelper.HttpHelper.GetAsync<RequestCode, ResultData<ResultCode[]>>(url, req);
+            if (result.status == "1")
+            {
+                ResultCode[] data = result.equips;
+                return data;
+
+            };
+            return null;
+        }
+
+
     }
 }

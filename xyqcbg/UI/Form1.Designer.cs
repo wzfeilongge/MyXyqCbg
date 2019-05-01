@@ -46,6 +46,7 @@
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -95,16 +96,18 @@
             this.columnHeader11,
             this.columnHeader12,
             this.columnHeader13,
-            this.columnHeader14});
+            this.columnHeader14,
+            this.columnHeader15});
+            this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.LabelWrap = false;
             this.listView1.Location = new System.Drawing.Point(-1, 28);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1148, 269);
+            this.listView1.Size = new System.Drawing.Size(1227, 269);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.Click += new System.EventHandler(this.listView1_Click);
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_Click);
             // 
             // columnHeader1
             // 
@@ -171,7 +174,12 @@
             // columnHeader14
             // 
             this.columnHeader14.Text = "总经验/亿";
-            this.columnHeader14.Width = 83;
+            this.columnHeader14.Width = 70;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "上架时间";
+            this.columnHeader15.Width = 97;
             // 
             // label1
             // 
@@ -271,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 340);
+            this.ClientSize = new System.Drawing.Size(1238, 340);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -291,8 +299,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "角色搜索工具";
             this.Load += new System.EventHandler(this.Form1_Load);
+            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(Form2_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(button2_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,6 +337,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
     }
 }
 

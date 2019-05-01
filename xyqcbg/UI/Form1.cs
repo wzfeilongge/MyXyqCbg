@@ -22,8 +22,6 @@ namespace xyqcbg
     {
         #region 默认初始化配置
         ListViewItem lt = null;
-        ListViewItem lts = new ListViewItem();
-        private Button btn = new Button();
         int page = 1;
         string[] urlArray=new string[15];
         int cont = 0;
@@ -57,7 +55,11 @@ namespace xyqcbg
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
+            if (User.user != null)
+            {
 
+                DbTools.UpdateUserState(User.user.UserName, LoginUI.state);
+            }
             Environment.Exit(0);
         }
 
@@ -147,7 +149,9 @@ namespace xyqcbg
                         lt.SubItems.Add(data.bb_expt_fashu.ToString());//法术修炼
                         lt.SubItems.Add(data.bb_expt_kangfa.ToString());//抗法修炼
                         var url = "https://xyq.cbg.163.com/" + "/equip?s=" + data.server_id + "&eid=" + data.eid + "&equip_refer=26&view_loc=reco_left";
+                        lt.SubItems.Add(data.create_time);
                         lt.SubItems.Add(Tools.DescReturn(data.desc));
+                        lt.SubItems.Add(data.create_time);
                         urlArray[cont] = url; //购买链接
                         cont++;
                         listView1.Items.Add(lt);
@@ -180,7 +184,7 @@ namespace xyqcbg
             if (User.user != null)
             {
 
-                this.Text = "尊敬的" + User.user.Name + "您好，欢迎使用本程序";
+                this.Text = "尊敬的" + User.user.Name + "您好，欢迎使用本程序，单击角色名 可以快速打开购买链接";
             }
             else {
 

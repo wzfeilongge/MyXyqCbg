@@ -32,7 +32,8 @@ namespace xyqcbg.Model
         public int bb_expt_kangfa { get; set; }//宝宝抗法修炼
         public int bb_expt_fangyu { get; set; }//宝宝防御修炼
         public int bb_expt_gongji { get; set; }//宝宝攻击修炼
-        
+        public string create_time { get; set; }//创建订单时间
+
        // public string[] highlights { get; set; }//亮点
 
 

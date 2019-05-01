@@ -33,6 +33,8 @@ namespace xyqcbg.Model
         public int price_max { get; set; }//最大价格
         public string pet_type_list { get; set; }//召唤兽类型集合
         public string equip_duanzao_attrlv_8 { get; set; } //锻造等级高于8的装备
+        public int pass_fair_show { get; set; }//是否是公示期 0是公示期 
+        public string order_by { get; set; } //排列方式
         public string school { get; set; }
 
         /// <summary>
@@ -162,6 +164,28 @@ namespace xyqcbg.Model
             return requests;
         }
 
+        /// <summary>
+        /// 搜索物品
+        /// </summary>
+        /// <param name="level_min"></param>
+        /// <param name="level_max"></param>
+        /// <param name="pass_fair_show">是否公示期</param>
+        /// <param name="page"></param>
+        /// <param name="act"></param>
+        /// <param name="search_type"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        public static RequestCode reqProp(int level_min,int level_max, int pass_fair_show = 0,int page=1, string act = "recommd_by_role", string search_type= "overall_search_equip",int count=15) {
 
+            RequestCode requests = new RequestCode();
+            requests.search_type = search_type;
+            requests.act = act;
+            requests.level_min = level_min;
+            requests.level_max = level_max;
+            requests.page = page;
+            requests.count = count;
+            requests.pass_fair_show = pass_fair_show;
+           return requests;
+        }
     }
 }
